@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import dateFormat from 'date-fns/format';
 
 function PrevNext({ previous, next }) {
   return (
@@ -18,16 +19,21 @@ function PrevNext({ previous, next }) {
   );
 }
 
+function Tags({ tags }) {
+  return <div className="post-tags">Tags // {tags.map(t => <Link to={`/tag/${t}/`}>#{t}</Link>)}</div>;
+}
+
 export default ({ data, pathContext }) => {
   const { previous, next } = pathContext;
   const post = data.markdownRemark;
   return (
-    <div>
+    <article>
       <h2>{post.frontmatter.title}</h2>
-      <div>Posted - {post.frontmatter.date}</div>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div>Posted // {dateFormat(Date.parse(post.frontmatter.date), 'MMM D, YYYY')}</div>
+      <Tags tags={post.frontmatter.tags} />
+      <section dangerouslySetInnerHTML={{ __html: post.html }} />
       <PrevNext previous={previous} next={next} />
-    </div>
+    </article>
   );
 };
 
@@ -38,6 +44,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        tags
       }
     }
   }

@@ -59,13 +59,26 @@ nav ul li {
 }
 
 nav ul li:last-child {
-  margin-right: none;
+  margin-right: 0;
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1em;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.posts {
+  flex: 2 1 500px;
+}
+
+.main aside {
+  flex: 1 1 200px;
 }
 
 .prev-next-links {
@@ -80,4 +93,16 @@ main {
 
 .next-link {
   flex: none;
+}
+
+.post-tags {
+  display: flex;
+}
+
+.post-tags a {
+  margin-right: 0.5em;
+}
+
+.post-tags a:last-child {
+  margin-right: 0;
 }
