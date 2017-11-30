@@ -10,7 +10,7 @@ export default function MainLayout({ children }) {
   return (
     <div>
       <Helmet
-        title="Gatsby Default Starter"
+        title="Tiny Hiccups"
         meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
       />
 
