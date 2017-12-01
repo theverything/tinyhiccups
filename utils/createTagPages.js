@@ -13,7 +13,7 @@ module.exports = ({ graphql, boundActionCreators }) => {
     `).then(result => {
       result.data.allMarkdownRemark.distinct.map(tag => {
         createPage({
-          path: `/tag/${tag}`,
+          path: `/tag/${tag}/`,
           component: path.resolve(`./src/templates/tagPosts.js`),
           context: {
             tag,

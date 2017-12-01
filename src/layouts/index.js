@@ -8,13 +8,12 @@ import './index.css';
 
 export default function MainLayout({ children }) {
   return (
-    <div>
+    <div className="container">
       <Helmet
         title="Tiny Hiccups"
         meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
       />
-
-      <main>
+      <header>
         <h1>Tiny Hiccups</h1>
         <nav>
           <ul>
@@ -26,8 +25,11 @@ export default function MainLayout({ children }) {
             </li>
           </ul>
         </nav>
-        {children()}
-      </main>
+      </header>
+      <main>{children()}</main>
+      <footer>
+        <small>(c) Copyright 2017 Kat Park, all rights reserved.</small>
+      </footer>
     </div>
   );
 }

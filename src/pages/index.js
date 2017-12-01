@@ -1,7 +1,9 @@
-import React from 'react';
-import Posts from '../templates/posts';
+import React from 'react'
+import Posts from '../templates/posts'
 
-const IndexPage = props => <Posts title="Posts" edges={props.data.allMarkdownRemark.edges} />;
+const IndexPage = props => (
+  <Posts title="Posts" edges={props.data.allMarkdownRemark.edges} />
+)
 
 export const query = graphql`
   query IndexQuery {
@@ -21,6 +23,6 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-export default IndexPage;
+export default IndexPage
