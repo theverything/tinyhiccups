@@ -6,6 +6,8 @@ import 'normalize.css';
 import './index.css';
 
 export default function MainLayout({ children }) {
+  const copyrightYear = new Date().getFullYear();
+
   return (
     <div className="container">
       <Helmet
@@ -30,7 +32,9 @@ export default function MainLayout({ children }) {
       </header>
       <main>{children}</main>
       <footer>
-        <small>(c) Copyright 2017 Kat Park, all rights reserved.</small>
+        <small>
+          &copy; Copyright {copyrightYear} Kat Park, all rights reserved.
+        </small>
       </footer>
     </div>
   );
