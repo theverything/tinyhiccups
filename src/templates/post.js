@@ -26,9 +26,11 @@ function PrevNext({ previous, next }) {
 function Tags({ tags }) {
   return (
     <div className="post-tags">
-      Tags:{' '}
+      Tags:
       {tags.map(t => (
-        <Link to={`/tag/${t}/`}>#{t}</Link>
+        <Link className="tag-link" to={`/tag/${t}/`}>
+          #{t}
+        </Link>
       ))}
     </div>
   );

@@ -114,6 +114,10 @@ main {
   flex: none;
 }
 
+.tag-link {
+  margin-left: 0.5rem;
+}
+
 .post-tags {
   display: flex;
 }
