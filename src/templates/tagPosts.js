@@ -1,12 +1,13 @@
-import React from 'react'
-import Posts from './posts'
+import React from 'react';
+import { graphql } from 'gatsby';
+import Posts from './posts';
 
 const TagPosts = props => (
   <Posts
-    title={`#${props.pathContext.tag}`}
+    title={`#${props.pageContext.tag}`}
     edges={props.data.allMarkdownRemark.edges}
   />
-)
+);
 
 export const query = graphql`
   query TagIndexQuery($tag: String!) {
@@ -29,6 +30,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default TagPosts
+export default TagPosts;

@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
 
 import 'normalize.css';
@@ -11,7 +10,10 @@ export default function MainLayout({ children }) {
     <div className="container">
       <Helmet
         title="Tiny Hiccups"
-        meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
       />
       <header>
         <h1>Tiny Hiccups</h1>
@@ -26,7 +28,7 @@ export default function MainLayout({ children }) {
           </ul>
         </nav>
       </header>
-      <main>{children()}</main>
+      <main>{children}</main>
       <footer>
         <small>(c) Copyright 2017 Kat Park, all rights reserved.</small>
       </footer>
