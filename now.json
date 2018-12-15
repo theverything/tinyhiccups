@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "tinyhiccups",
+  "alias": "www.tinyhiccups.com",
   "builds": [
     {
       "src": "package.json",

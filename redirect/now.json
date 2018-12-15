@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "name": "tinyhiccups-redirect",
+  "alias": "tinyhiccups.com",
+  "builds": [
+    {
+      "src": "main.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": ".*",
+      "dest": "/main.js"
+    }
+  ]
+}
