@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Helmet from 'react-helmet';
+import Cart from '../cart';
 
 import 'normalize.css';
 import './index.css';
@@ -27,9 +28,13 @@ export default function MainLayout({ children }) {
             <li>
               <Link to="/about/">About</Link>
             </li>
+            <li>
+              <Link to="/shop/">Shop</Link>
+            </li>
           </ul>
         </nav>
       </header>
+      <Cart/>
       <main>{children}</main>
       <footer>
         <small>

@@ -1,9 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Posts from '../templates/posts';
+import Posts from '../components/posts';
+import Layout from '../components/layout';
 
 const IndexPage = props => (
-  <Posts title="Posts" edges={props.data.allMarkdownRemark.edges} />
+  <Layout>
+    <Posts title="Posts" edges={props.data.allMarkdownRemark.edges} />
+  </Layout>
 );
 
 export const query = graphql`

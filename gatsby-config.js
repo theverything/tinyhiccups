@@ -1,8 +1,19 @@
+const { STRIPE_KEY } = process.env;
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.tinyhiccups.com',
   },
   plugins: [
+    `gatsby-plugin-stripe`,
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Product', 'Sku'],
+        secretKey: STRIPE_KEY,
+        downloadFiles: true,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',

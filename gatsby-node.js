@@ -2,6 +2,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const createPosts = require('./utils/createPosts');
 const createTagPages = require('./utils/createTagPages');
+const createProductPages = require('./utils/createProducts');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -14,9 +15,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     });
-  }
+  } 
 };
 
 exports.createPages = opts => {
-  return Promise.all([createPosts(opts), createTagPages(opts)]);
+  return Promise.all([createPosts(opts), createTagPages(opts), createProductPages(opts)]);
 };

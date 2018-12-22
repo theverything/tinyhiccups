@@ -1,12 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Posts from './posts';
+import Posts from '../components/posts';
+import Layout from '../components/layout';
 
 const TagPosts = props => (
-  <Posts
-    title={`#${props.pageContext.tag}`}
-    edges={props.data.allMarkdownRemark.edges}
-  />
+  <Layout>
+    <Posts
+      title={`#${props.pageContext.tag}`}
+      edges={props.data.allMarkdownRemark.edges}
+    />
+  </Layout>
 );
 
 export const query = graphql`
