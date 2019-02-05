@@ -9,14 +9,12 @@ function PrevNext({ previous, next }) {
     <div className="prev-next-links">
       {previous && (
         <div className="prev-link">
-          Previous Post -{' '}
-          <Link to={previous.fields.slug}>{previous.frontmatter.title}</Link>
+          Previous Post - <Link to={previous.fields.slug}>{previous.frontmatter.title}</Link>
         </div>
       )}
       {next && (
         <div className="next-link">
-          Next Post -{' '}
-          <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
+          Next Post - <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
         </div>
       )}
     </div>
@@ -41,12 +39,9 @@ export default ({ data, pageContext }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <article>
+      <article className="post-container">
         <h2>{post.frontmatter.title}</h2>
-        <div>
-          Posted:{' '}
-          {' ' + dateFormat(Date.parse(post.frontmatter.date), 'MMM D, YYYY')}
-        </div>
+        <div>Posted: {' ' + dateFormat(Date.parse(post.frontmatter.date), 'MMM D, YYYY')}</div>
         <Tags tags={post.frontmatter.tags} />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <PrevNext previous={previous} next={next} />

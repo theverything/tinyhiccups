@@ -122,14 +122,6 @@ main {
   display: flex;
 }
 
-.post-tags a {
-  margin-right: 0.5em;
-}
-
-.post-tags a:last-child {
-  margin-right: 0;
-}
-
 footer {
   text-align: center;
   padding: 1em 0;
