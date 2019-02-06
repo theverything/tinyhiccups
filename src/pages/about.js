@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import pic from '../images/IMG_7416.jpg'
 
 export default function AboutPage() {
   return (
@@ -28,6 +29,8 @@ export default function AboutPage() {
         <p>And so, Tiny Hiccups was born.</p>
 
         <p>Hope you enjoy this parenthood journey with me as I share my world with you.</p>
+
+        <img className="resp-img" src={pic} alt="kat and paisley"/>
 
         <p>
           Best,

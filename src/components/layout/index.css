@@ -126,3 +126,7 @@ footer {
   text-align: center;
   padding: 1em 0;
 }
+
+.resp-img {
+  max-width: 100%;
+}
