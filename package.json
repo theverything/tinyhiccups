@@ -29,7 +29,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --trailing-comma all --single-quote --write \"src/**/*.js\"",
-    "now-build": "npm run build"
+    "now-build": "yarn build"
   },
   "devDependencies": {
     "prettier": "^1.8.2"
