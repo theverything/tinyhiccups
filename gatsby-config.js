@@ -18,8 +18,8 @@ module.exports = {
         background_color: '#daacc9',
         theme_color: '#daacc9',
         display: 'standalone',
-        // icon: 'src/images/icon.png', // This path is relative to the root of the site.
-        // include_favicon: true, // Include favicon
+        icon: 'src/images/tinyhiccups-icon.png',
+        include_favicon: true,
       },
     },
     'gatsby-plugin-react-helmet',
